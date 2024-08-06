@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { Typewriter } from 'react-simple-typewriter';
 import './App.css'
 
 function App() {
@@ -37,7 +38,13 @@ function App() {
   },[length,numberAllowed,charAllowed,passwordGenerator])
   return (
     <div className='w-full max-w-md m-auto bg-slate-500 rounded-lg py-2 px-4 text-orange-400'>
-     <h1 className='text-white  my-3'>Password Generator</h1>
+     <h1 className='text-white  my-3'>
+        <Typewriter loop={true}
+          words={["Password Generator", "Create strong password"]}
+          typeSpeed={150}
+          delaySpeed={3000}
+        >Password Generator</Typewriter>
+      </h1>
      <div className='flex shadow rounded-lg overflow-hidden mb-4'>
       <input
        type="text" 
